@@ -1,0 +1,44 @@
+Xtrain = read($train, data_type="matrix", format="csv")
+Xtest = read($test, data_type="matrix", format="csv")
+
+# Materialize both inputs before timing individual transformations.
+inputChecksum = sum(Xtrain) + sum(Xtest)
+print("input checksum: " + inputChecksum)
+
+timings = matrix(0.0, rows=4, cols=1)
+
+start = time()
+[standardTrain, centering, scaleFactors] = scale(Xtrain, TRUE, TRUE)
+standardTest = scaleApply(Xtest, centering, scaleFactors)
+write(standardTrain, $output + "/standard_train.csv", format="csv")
+write(standardTest, $output + "/standard_test.csv", format="csv")
+timings[1, 1] = (time() - start) / 1e9
+
+start = time()
+[robustTrain, medians, q1, q3] = scaleRobust(Xtrain)
+robustTest = scaleRobustApply(Xtest, medians, q1, q3)
+write(robustTrain, $output + "/robust_train.csv", format="csv")
+write(robustTest, $output + "/robust_test.csv", format="csv")
+timings[2, 1] = (time() - start) / 1e9
+
+start = time()
+[yeoJohnsonTrain, yjLambdas, yjMeans, yjScales] = powerTransform(
+    Xtrain, "yeo-johnson", TRUE)
+yeoJohnsonTest = powerTransformApply(
+    Xtest, yjLambdas, yjMeans, yjScales, "yeo-johnson")
+write(yeoJohnsonTrain, $output + "/yeo-johnson_train.csv", format="csv")
+write(yeoJohnsonTest, $output + "/yeo-johnson_test.csv", format="csv")
+timings[3, 1] = (time() - start) / 1e9
+
+if ($boxcox) {
+  start = time()
+  [boxCoxTrain, bcLambdas, bcMeans, bcScales] = powerTransform(
+      Xtrain, "box-cox", TRUE)
+  boxCoxTest = powerTransformApply(
+      Xtest, bcLambdas, bcMeans, bcScales, "box-cox")
+  write(boxCoxTrain, $output + "/box-cox_train.csv", format="csv")
+  write(boxCoxTest, $output + "/box-cox_test.csv", format="csv")
+  timings[4, 1] = (time() - start) / 1e9
+}
+
+write(timings, $output + "/timings.csv", format="csv")

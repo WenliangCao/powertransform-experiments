@@ -1,0 +1,19 @@
+{
+  "name": "iris",
+  "task": "clustering",
+  "source": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html",
+  "rows": 150,
+  "features": 4,
+  "feature_names": [
+    "sepal length (cm)",
+    "sepal width (cm)",
+    "petal length (cm)",
+    "petal width (cm)"
+  ],
+  "target_values": 3,
+  "minimum": 0.1,
+  "maximum": 7.9,
+  "box_cox_eligible": true,
+  "x_sha256": "7f85fb6fbe67f7d5107a91c0e13afee50fcef3fa6f7b20bdd8b249ac8a5e861e",
+  "y_sha256": "cdb523f28baf2f55e8b3b1cd843ba6bd5ce1e6dcb38b1293708ab4e6730fe4f6"
+}

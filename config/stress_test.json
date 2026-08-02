@@ -1,0 +1,61 @@
+{
+  "name": "skew-focused stress test",
+  "run_name": "stress_test",
+  "status": "frozen before downstream evaluation",
+  "selection_policy": {
+    "source": "UCI Machine Learning Repository",
+    "requirements": [
+      "publicly available tabular data",
+      "numeric features with no missing values",
+      "one dataset for regression, classification, and clustering",
+      "median absolute feature skewness greater than 2.0",
+      "supervised datasets with at least 5000 rows"
+    ],
+    "reporting_rule": "Keep all selected datasets and all methods regardless of downstream results."
+  },
+  "seeds": [13, 37, 73, 101, 149],
+  "test_size": 0.2,
+  "datasets": {
+    "parkinsons_telemonitoring": {
+      "task": "regression",
+      "display_name": "Parkinsons Telemonitoring",
+      "source": "https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring",
+      "download": "https://archive.ics.uci.edu/static/public/189/parkinsons%2Btelemonitoring.zip",
+      "rows": 5875,
+      "features": 19,
+      "target": "total_UPDRS",
+      "excluded_columns": ["subject#", "motor_UPDRS", "total_UPDRS"],
+      "split": "group_shuffle",
+      "group_column": "subject#",
+      "groups": 42,
+      "median_absolute_skewness": 3.099221,
+      "features_with_absolute_skewness_above_one": 13
+    },
+    "htru2": {
+      "task": "classification",
+      "display_name": "HTRU2",
+      "source": "https://archive.ics.uci.edu/dataset/372/htru2",
+      "download": "https://archive.ics.uci.edu/static/public/372/htru2.zip",
+      "rows": 17898,
+      "features": 8,
+      "target": "class",
+      "split": "stratified_random",
+      "median_absolute_skewness": 2.314384,
+      "features_with_absolute_skewness_above_one": 6
+    },
+    "wholesale_customers": {
+      "task": "clustering",
+      "display_name": "Wholesale Customers",
+      "source": "https://archive.ics.uci.edu/dataset/292/wholesale+customers",
+      "download": "https://archive.ics.uci.edu/static/public/292/wholesale%2Bcustomers.zip",
+      "rows": 440,
+      "features": 6,
+      "external_label": "Channel",
+      "excluded_columns": ["Channel", "Region"],
+      "split": "full_dataset",
+      "clusters": 2,
+      "median_absolute_skewness": 3.842803,
+      "features_with_absolute_skewness_above_one": 6
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "wholesale_customers",
+  "task": "clustering",
+  "source": "https://archive.ics.uci.edu/dataset/292/wholesale+customers",
+  "rows": 440,
+  "features": 6,
+  "feature_names": [
+    "Fresh",
+    "Milk",
+    "Grocery",
+    "Frozen",
+    "Detergents_Paper",
+    "Delicassen"
+  ],
+  "target_values": 2,
+  "minimum": 3.0,
+  "maximum": 112151.0,
+  "box_cox_eligible": true,
+  "x_sha256": "ac487b7a15a6bb8b101ce73053b48220408557e2b606376458698d7b81e26536",
+  "y_sha256": "d90caf8f146b39e6d1c8f54dac2aec8a7df85ebea0d72087e24c9fbf35f9f976"
+}

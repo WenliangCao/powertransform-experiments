@@ -1,0 +1,22 @@
+{
+  "name": "seeds",
+  "task": "clustering",
+  "source": "https://archive.ics.uci.edu/dataset/236/seeds",
+  "rows": 210,
+  "features": 7,
+  "feature_names": [
+    "area",
+    "perimeter",
+    "compactness",
+    "kernel_length",
+    "kernel_width",
+    "asymmetry_coefficient",
+    "kernel_groove_length"
+  ],
+  "target_values": 3,
+  "minimum": 0.7651,
+  "maximum": 21.18,
+  "box_cox_eligible": true,
+  "x_sha256": "5ebca41ff0e4f9607e7e7d9a68817f752a8279c44f63ad891d54ebef75c7ce70",
+  "y_sha256": "a2052f61e22e8369aa40cee57eefced8fd50066b598f44fdcb201468dc8d6ef8"
+}

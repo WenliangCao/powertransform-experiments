@@ -1,0 +1,37 @@
+{
+  "seeds": [13, 37, 73, 101, 149],
+  "test_size": 0.2,
+  "methods": [
+    "none",
+    "standard",
+    "robust",
+    "yeo-johnson",
+    "box-cox"
+  ],
+  "datasets": {
+    "california_housing": {
+      "task": "regression",
+      "display_name": "California Housing"
+    },
+    "abalone": {
+      "task": "regression",
+      "display_name": "Abalone"
+    },
+    "breast_cancer": {
+      "task": "classification",
+      "display_name": "Breast Cancer Wisconsin"
+    },
+    "wine": {
+      "task": "classification",
+      "display_name": "Wine"
+    },
+    "iris": {
+      "task": "clustering",
+      "display_name": "Iris"
+    },
+    "seeds": {
+      "task": "clustering",
+      "display_name": "Seeds"
+    }
+  }
+}

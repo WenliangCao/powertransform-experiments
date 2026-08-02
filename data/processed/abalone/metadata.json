@@ -1,0 +1,22 @@
+{
+  "name": "abalone",
+  "task": "regression",
+  "source": "https://archive.ics.uci.edu/dataset/1/abalone",
+  "rows": 4175,
+  "features": 7,
+  "feature_names": [
+    "length",
+    "diameter",
+    "height",
+    "whole_weight",
+    "shucked_weight",
+    "viscera_weight",
+    "shell_weight"
+  ],
+  "target_values": 28,
+  "minimum": 0.0005,
+  "maximum": 2.8255,
+  "box_cox_eligible": true,
+  "x_sha256": "07238d06cffb7791ca48d380862481c9961024592ffd8534bfff116a47977de0",
+  "y_sha256": "1d8239008cfdd09ead0b4dff762864e7d0f20f7b0a1054fb870198efb8e5efd9"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "htru2",
+  "task": "classification",
+  "source": "https://archive.ics.uci.edu/dataset/372/htru2",
+  "rows": 17898,
+  "features": 8,
+  "feature_names": [
+    "profile_mean",
+    "profile_stdev",
+    "profile_kurtosis",
+    "profile_skewness",
+    "dm_mean",
+    "dm_stdev",
+    "dm_kurtosis",
+    "dm_skewness"
+  ],
+  "target_values": 2,
+  "minimum": -3.139269611,
+  "maximum": 1191.000837,
+  "box_cox_eligible": false,
+  "x_sha256": "59b9a5eedcdff57f7ef225c000dafcedc6874fba607829b3a3b8f264b1ba9bfd",
+  "y_sha256": "069705b6c8a3c563e72dfdbc53045d57f3a43e230a8eb4ea994bbb8bc6993b43"
+}

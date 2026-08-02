@@ -1,0 +1,23 @@
+{
+  "name": "california_housing",
+  "task": "regression",
+  "source": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html",
+  "rows": 20640,
+  "features": 8,
+  "feature_names": [
+    "MedInc",
+    "HouseAge",
+    "AveRooms",
+    "AveBedrms",
+    "Population",
+    "AveOccup",
+    "Latitude",
+    "Longitude"
+  ],
+  "target_values": 3842,
+  "minimum": -124.35,
+  "maximum": 35682.0,
+  "box_cox_eligible": false,
+  "x_sha256": "5158d662da53b6823c01abc4162b4860c52b9c4b6df0d47e4b9783ba6f783a54",
+  "y_sha256": "36bc41b215f31b65599762c2372b957c16f0aa331ae952ac1b9c1c88bfb31e2f"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "wine",
+  "task": "classification",
+  "source": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html",
+  "rows": 178,
+  "features": 13,
+  "feature_names": [
+    "alcohol",
+    "malic_acid",
+    "ash",
+    "alcalinity_of_ash",
+    "magnesium",
+    "total_phenols",
+    "flavanoids",
+    "nonflavanoid_phenols",
+    "proanthocyanins",
+    "color_intensity",
+    "hue",
+    "od280/od315_of_diluted_wines",
+    "proline"
+  ],
+  "target_values": 3,
+  "minimum": 0.13,
+  "maximum": 1680.0,
+  "box_cox_eligible": true,
+  "x_sha256": "1d77fb5656608e7e0adc44cd9338751f68143a5b17ef325905d3d47d3270cd7b",
+  "y_sha256": "63c4f66f4a61d90054b24f4adc0b8fdb9219ddc6a27e7d92a3d32d538266e555"
+}

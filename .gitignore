@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+work/
+tmp/
+results/logs/
+report/generated/
+output/pdf/*.aux
+output/pdf/*.log
+output/pdf/*.out
+output/pdf/*.toc
